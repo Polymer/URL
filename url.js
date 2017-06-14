@@ -508,6 +508,13 @@
       parse.call(this, protocol + ':', 'scheme start');
     },
 
+    get username() {
+      return this._username;
+    },
+    get password() {
+      return this._password;
+    },
+
     get host() {
       return this._isInvalid ? '' : this._port ?
           this._host + ':' + this._port : this._host;
